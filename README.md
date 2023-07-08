@@ -2,4 +2,7 @@
 
 Randomized particle attraction simulation. Emerging patterns are quite pleasing to look at. 
 
-![example](https://github.com/CronosC/particleSimulation/blob/main/particleAttractionSketch/example.gif)
+![example1](example1.gif)
+![example2](example2.gif)
+![example3](example3.gif)
+![example4](example4.gif)
