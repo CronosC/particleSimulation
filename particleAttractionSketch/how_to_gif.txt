@@ -1,0 +1,10 @@
+create pngs of all the necessary frames, then:
+
+ffmpeg \
+  -framerate 60 \
+  -pattern_type glob \
+  -i '*.png' \
+  -r 15 \
+  -vf scale=512:-1 \
+  out.gif \
+;

@@ -1,5 +1,9 @@
+
+
+
 Visualizer visualizer;
 State state;
+int n = 0;
 
 void setup() {
   fullScreen();
@@ -18,6 +22,8 @@ void setup() {
 void draw() {
   this.visualizer.drawState(this.state);
   this.state.updateParticles();
+  //if(n%1 == 0) saveFrame("Frame" + String.format("%08d", n) + ".png");
+  n=n+1;
 }
 
 void keyPressed() {
