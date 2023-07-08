@@ -1,7 +1,7 @@
 class Settings{
   boolean originalAttractionFormula = true;
   float G = 0.01;
-  int interactionDistance = 200;
+  int interactionDistance = 500;
   
   public Settings(){}
   

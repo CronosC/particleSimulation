@@ -3,18 +3,16 @@ State state;
 
 void setup() {
   fullScreen();
-  this.state = new State(1000, 600);
+  this.state = new State(1440, 900);
   this.visualizer = new Visualizer();
   
-  //state.addParticles("A", 7, color(int(random(0, 255)), int(random(0, 255)), int(random(0, 255))));
+  state.addRandomParticles("A");
+  state.addRandomParticles("B");
+  state.addRandomParticles("C");
+  state.addRandomParticles("D");
+  state.addRandomParticles("E");
   
-  state.addParticles("A", int(random(100, 250)), color(int(random(0, 255)), int(random(0, 255)), int(random(0, 255))), int(random(2, 8)), random(0.5, 1.5));
-  state.addParticles("B", int(random(100, 250)), color(int(random(0, 255)), int(random(0, 255)), int(random(0, 255))), int(random(2, 8)), random(0.5, 1.5));
-  state.addParticles("C", int(random(100, 250)), color(int(random(0, 255)), int(random(0, 255)), int(random(0, 255))), int(random(2, 8)), random(0.5, 1.5));
-  state.addParticles("D", int(random(100, 250)), color(int(random(0, 255)), int(random(0, 255)), int(random(0, 255))), int(random(2, 8)), random(0.5, 1.5));
-  state.addParticles("E", int(random(100, 250)), color(int(random(0, 255)), int(random(0, 255)), int(random(0, 255))), int(random(2, 8)), random(0.5, 1.5));
-  //state.addParticles("F", int(random(100, 250)), color(int(random(0, 255)), int(random(0, 255)), int(random(0, 255))), int(random(2, 8)), random(0.5, 1.5));
-  //state.addParticles("G", int(random(100, 250)), color(int(random(0, 255)), int(random(0, 255)), int(random(0, 255))), int(random(2, 8)), random(0.5, 1.5))
+  background(0, 0, 0, 0);
 }
 
 void draw() {
@@ -25,5 +23,8 @@ void draw() {
 void keyPressed() {
   if (key == 'a' || key == 'A') {
       state.settings.toggleAttractionFormula();
+  }else if(key == 'l' || key == 'L'){
+      visualizer.toggleDrawBorders();
   }
+  
 }

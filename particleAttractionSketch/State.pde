@@ -28,6 +28,14 @@ class State{
     particles.add(new Particle(type, particlePosition, fillColor, size, densityFactor));
   }
   
+  public void addRandomParticles(String type){
+    int n = int(random(100, 500));
+    color fillColor = color(int(random(50, 250)), int(random(50, 250)), int(random(50, 250)));
+    int size = int(random(2, 8));
+    float densityFactor = random(0.25, 1.75);
+    this.addParticles(type, n, fillColor, size, densityFactor);
+  }
+  
   public void addParticles(String type, int n, color fillColor, int size, float densityFactor){
     for(int i = 1; i < n;i++){
       this.addParticle(type, fillColor, size, densityFactor);
